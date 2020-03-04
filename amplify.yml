@@ -1,0 +1,13 @@
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn
+    build:
+      commands:
+        - yarn envsub && yarn build
+  artifacts:
+    baseDirectory: /public
+    files:
+      - '**/*'
